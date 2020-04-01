@@ -5,7 +5,7 @@
 </head>
 <body>
 <ul>
-  <li><a href="#">ToDoList</a></li>
-  <li><a href="#news">Overview</a></li>
+  <li><a href="index.php">ToDoList</a></li>
+    <li><a class="nav-link" href="overview.php">Agenda</a></li>
   </li>
 </ul>

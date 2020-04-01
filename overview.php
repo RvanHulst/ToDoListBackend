@@ -2,14 +2,15 @@
     require "connection.php";
 	require "navbar.php";
  ?>
- <!DOCTYPE html>
+    <!DOCTYPE html>
  <html>
  <head>
  	<title>ToDoList</title>
  	<link rel="stylesheet" type="text/css" href="main.css">
  </head>
  <body>
- 	<p>Hello World</p>
+ 	<p>Bye World</p>
  
  </body>
  </html>
+
