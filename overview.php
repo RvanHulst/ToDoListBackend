@@ -9,8 +9,10 @@
  	<link rel="stylesheet" type="text/css" href="main.css">
  </head>
  <body>
- 	<p>Bye World</p>
- 
+	 <p>Bye World</p>
+ <?php
+    require "footer.php";
+?>
  </body>
  </html>
 

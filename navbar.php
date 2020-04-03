@@ -6,6 +6,6 @@
 <body>
 <ul>
   <li><a href="index.php">ToDoList</a></li>
-    <li><a class="nav-link" href="overview.php">Agenda</a></li>
+    <li><a class="nav-link" href="overview.php">Overview</a></li>
   </li>
 </ul>
