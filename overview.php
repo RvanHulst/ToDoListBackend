@@ -4,11 +4,11 @@
  ?>
     <!DOCTYPE html>
  <html>
- <head>
- 	<title>ToDoList</title>
- 	<link rel="stylesheet" type="text/css" href="main.css">
- </head>
+ <?php 
+ require "head.php";
+ ?>
  <body>
+ <p class="w3-xlarge">Welcome on Index</p>
 	 <p>Bye World</p>
  <?php
     require "footer.php";
