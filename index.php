@@ -1,11 +1,11 @@
 <?php 
-    require "connection.php";
-	require "navbar.php";
+    require "include/connection.php";
+	require "include/navbar.php";
  ?>
  <!DOCTYPE html>
  <html>
 <?php 
-require "head.php";
+require "include/head.php";
 ?>
     
     <body>
@@ -53,7 +53,7 @@ require "head.php";
             </div>
         </div>
 <?php
- require "footer.php";
+ require "include/footer.php";
 ?>
     </body>
 </html>

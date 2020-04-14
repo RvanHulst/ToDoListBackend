@@ -1,17 +1,18 @@
 <?php 
-    require "connection.php";
-	require "navbar.php";
+    require "include/connection.php";
+	require "include/navbar.php";
  ?>
     <!DOCTYPE html>
  <html>
  <?php 
- require "head.php";
+ require "include/head.php";
  ?>
  <body>
  <p class="w3-xlarge">Welcome on Index</p>
 	 <p>Bye World</p>
  <?php
-    require "footer.php";
+    require "include/footer.php";
 ?>
  </body>
  </html>
+  
