@@ -24,5 +24,6 @@ li a:hover {
   background-color: red;
 }
 #footer {
-  margin-left: 600px;
+  width: 100%;
+  text-align: center;
 }

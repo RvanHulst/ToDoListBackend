@@ -1,14 +1,16 @@
-<?php 
-    require "include/connection.php";
-	require "include/navbar.php";
- ?>
-    <!DOCTYPE html>
- <html>
- <?php 
- require "include/head.php";
- ?>
- <body>
- <body>
+
+<?php //Starts the database connection.
+include __DIR__ . '\include\head.php';
+require "include/navbar.php";
+
+
+$stmt = $conn->prepare("SELECT * FROM `lists`");
+$stmt->execute();
+$result = $stmt->fetchAll();
+$conn = null;
+?>
+
+<body>
     <div class="container">
         <h1>To-Do List</h1>
         <table class="table">
@@ -19,27 +21,36 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                foreach ($result as $row) {
+                ?>
+
                     <tr>
-                        <td><?php echo $row['list_name'] ?></td>
+                        <td><?php echo $row['name'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-success" href=''>
+                            <a class="btn btn-success" href='include/showlist.php?id=<?php echo $row['id'] ?>'>
+                                <i class="far fa-folder-open"></i>
                             </a>
-                            <a class="btn btn-warning" href=''>
+                            <a class="btn btn-warning" href=' include/updateList.php?id=<?php echo $row['id'] ?>'>
+                                <i class=" far fa-edit"></i>
                             </a>
-                            <a class="btn btn-danger" href=''>
+                            <a class="btn btn-danger" href=' include/deletelist.php?id=<?php echo $row['id'] ?>'>
+                                <i class="fas fa-trash-alt"></i>
                             </a>
                         </td>
                     </tr>
+                <?php } ?>
                 <tr>
                 </tr>
             </tbody>
         </table>
         <div class="col-12 text-center">
-            <a class="btn btn-primary text-white" href="php/createList.php">Nieuwe lijst aanmaken</a>
+            <a class="btn btn-primary text-white" href="include/createList.php">Nieuwe lijst aanmaken</a>
         </div>
     </div>
-    <?php
-    require "include/footer.php";
-    ?>
+      <?php
+           require "include/footer.php";
+       ?>
 </body>
+
 </html>

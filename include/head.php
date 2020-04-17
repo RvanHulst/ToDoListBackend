@@ -1,3 +1,6 @@
+<?php
+require __DIR__ . '\connection.php';
+?>
 <head>
  <title>ToDoList</title>
         
