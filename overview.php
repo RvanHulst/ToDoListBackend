@@ -22,7 +22,7 @@
                     <tr>
                         <td><?php echo $row['list_name'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-success" href=' '>
+                            <a class="btn btn-success" href=''>
                             </a>
                             <a class="btn btn-warning" href=''>
                             </a>
