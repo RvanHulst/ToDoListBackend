@@ -28,7 +28,7 @@ $conn = null;
                     <tr>
                         <td><?php echo $row['name'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-success" href='include/showlist.php?id=<?php echo $row['id'] ?>'>
+                            <a class="btn btn-success" href='include/showList.php?id=<?php echo $row['id'] ?>'>
                                 <i class="far fa-folder-open"></i>
                             </a>
                             <a class="btn btn-warning" href=' include/updateList.php?id=<?php echo $row['id'] ?>'>
