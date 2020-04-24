@@ -28,15 +28,9 @@ $conn = null;
                     <tr>
                         <td><?php echo $row['name'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-success" href='include/showList.php?id=<?php echo $row['id'] ?>'>
-                                <i class="far fa-folder-open"></i>
-                            </a>
-                            <a class="btn btn-warning" href=' include/updateList.php?id=<?php echo $row['id'] ?>'>
-                                <i class=" far fa-edit"></i>
-                            </a>
-                            <a class="btn btn-danger" href=' include/deletelist.php?id=<?php echo $row['id'] ?>'>
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
+                            <a class="btn btn-success" href='include/showList.php?id=<?php echo $row['id'] ?>'>Tasks</a>
+                            <a class="btn btn-warning" href=' include/updateList.php?id=<?php echo $row['id'] ?>'>Edit</a>
+                            <a class="btn btn-danger" href=' include/deletelist.php?id=<?php echo $row['id'] ?>'>Delete</a>
                         </td>
                     </tr>
                 <?php } ?>

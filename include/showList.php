@@ -34,7 +34,8 @@ $conn = null;
             </div>
             <thead>
                 <tr>
-                    <th scope="col">Taken</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Status</th>
                     <th scope="col">Duur in minuten</th>
                     <th scope="col"></th>
@@ -46,14 +47,13 @@ $conn = null;
                 ?>
                     <tr class="tasksTable <?php echo $row['status'] ?>">
                         <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['description'] ?></td>
                         <td><?php echo $row['status'] ?></td>
                         <td><?php echo $row['duration'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-warning" href='updateTask.php?id=<?php echo $row['id'] ?>'>
-                                <i class=" far fa-edit"></i>
+                            <a class="btn btn-warning" href='updateTask.php?id=<?php echo $row['id'] ?>'>Edit</i>
                             </a>
-                            <a class="btn btn-danger" href='deleteTask.php?id=<?php echo $row['id'] ?>'>
-                                <i class="fas fa-trash-alt"></i>
+                            <a class="btn btn-danger" href='deleteTask.php?id=<?php echo $row['id'] ?>'>Delete</i>
                             </a>
                         </td>
                     </tr>
@@ -63,7 +63,8 @@ $conn = null;
             </tbody>
         </table>
         <div class="col-12 text-center">
-            <a class="btn btn-primary text-white" href="createTask.php?list_id=<?php echo $result['list_id'] ?>">Nieuwe taak aanmaken</a>
+            <a class="btn btn-danger text-white" href="../overview.php">Terug naar Overview</a>
+            <a class="btn btn-primary text-white" href="createTask.php?id=<?php echo $result['id'] ?>">Nieuwe taak aanmaken</a>
         </div>
     </div>
 </body>
