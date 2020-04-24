@@ -4,14 +4,14 @@ include __DIR__ . '\head.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
 $stmt = $conn->prepare("SELECT `id`, `name` FROM `lists` WHERE `id` = :id");
-$stmt->bindParam('id', $_GET['id'], PDO::PARAM_INT);
+$stmt->bindParam('id', $_GET['id']);
 $stmt->execute();
 
 $result = $stmt->fetch();
 
 //Prepares and executes the statement fetching all the tasks that are linked to the above List ID.
 $stmt2 = $conn->prepare("SELECT * FROM tasks WHERE list_id = :list_id");
-$stmt2->bindParam(':list_id', $_GET['id'], PDO::PARAM_INT);
+$stmt2->bindParam(':list_id', $_GET['id']);
 $stmt2->execute();
 
 $result2 = $stmt2->fetchAll();
@@ -51,7 +51,7 @@ $conn = null;
                         <td><?php echo $row['status'] ?></td>
                         <td><?php echo $row['duration'] ?></td>
                         <td class="text-right">
-                            <a class="btn btn-warning" href='updateTask.php?id=<?php echo $row['id'] ?>'>Edit</i>
+                            <a class="btn btn-warning" href='updateTask.php?id=<?php echo $row['id'] ?>&list_id=<?php echo $row["list_id"]?>'>Edit</i>
                             </a>
                             <a class="btn btn-danger" href='deleteTask.php?id=<?php echo $row['id'] ?>'>Delete</i>
                             </a>

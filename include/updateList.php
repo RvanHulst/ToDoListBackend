@@ -5,7 +5,7 @@ include __DIR__ . '\head.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
 $stmt = $conn->prepare("SELECT * FROM lists WHERE id=:id");
-$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
+$stmt->bindParam(':id', $_GET['id']);
 $stmt->execute();
 
 $result = $stmt->fetch();
@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //Prepares the statement to update the list, it then binds the parameters using PDO compliance and then redirects back to the index page.
 
     $stmt = $conn->prepare("UPDATE lists SET name = :name WHERE id=:id");
-    $stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR);
-    $stmt->bindParam(':id', $_POST['id'], PDO::PARAM_INT);
+    $stmt->bindParam(':name', $_POST['name']);
+    $stmt->bindParam(':id', $_POST['id']);
     $stmt->execute();
     $conn = null;
     header("Location: ../overview.php");
