@@ -9,9 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     require __DIR__ . '\connection.php';
     //Prepares the statement to create the list, it then binds the parameter using PDO compliance and then redirects back to the index page.
     $stmt = $conn->prepare("INSERT INTO lists (name) VALUES (:name)");
-    $stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR);
+    $stmt->bindParam(':name', $_POST['name']);
     $stmt->execute();
-    //$conn = null;
 
     header("Location: ../overview.php");
 };

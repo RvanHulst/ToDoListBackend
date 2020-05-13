@@ -38,7 +38,6 @@ $conn = null;
                     <th scope="col">Description</th>
                     <th scope="col">Status</th>
                     <th scope="col">Duur in minuten</th>
-                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
