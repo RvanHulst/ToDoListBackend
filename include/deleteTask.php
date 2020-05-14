@@ -1,6 +1,6 @@
 <?php
 //Starts the database connection.
-require __DIR__ . '\connection.php';
+require 'connection.php';
 //Prepares the statement to delete the task, it then binds the parameters using PDO compliance and then redirects back to the list page.
 
 $stmt = $conn->prepare("DELETE FROM tasks WHERE id = :id");

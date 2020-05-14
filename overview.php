@@ -1,6 +1,6 @@
 
 <?php //Starts the database connection.
-include __DIR__ . '\include\head.php';
+require "include/head.php";
 require "include/navbar.php";
 
 

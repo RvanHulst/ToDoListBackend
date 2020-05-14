@@ -1,5 +1,5 @@
 <?php //Starts the database connection.
-include __DIR__ . '\head.php';
+include 'head.php';
 
 //Prepares and executes the statement getting the ID of the task you are currently in.
 $stmt = $conn->prepare("SELECT * FROM tasks WHERE id=:id");

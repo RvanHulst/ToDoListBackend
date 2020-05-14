@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '\connection.php';
+require 'connection.php';
 ?>
 <head>
  <title>ToDoList</title>

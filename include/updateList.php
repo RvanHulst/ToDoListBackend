@@ -1,7 +1,7 @@
 <?php
 //Starts the database connection.
 
-include __DIR__ . '\head.php';
+include 'head.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
 $stmt = $conn->prepare("SELECT * FROM lists WHERE id=:id");

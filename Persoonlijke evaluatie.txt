@@ -1,0 +1,40 @@
+Persoonlijke evaluatie Raaf van Hulst
+
+
+
+    plus punten
+    -----------
+Dat ik een goed idee had van hoe en wat ik het wouw hebben.
+Dat ik goed me trello bord heb gebruikt en daardoor better een planning in me hoofd had en op papier waardoor ik ook wist wat ik precies die dag wouw doen.
+Dat ik veel van w3schools heb kunnen leren en heb kunnen snappen daardoor 
+Dat ik minder hulp heb gevraagd aan vrienden
+
+    min punten
+    ----------
+Dat ik te langzaam aan me projecten werk waardoor ik telkens net me deadlines haal terwijl ik veel sneller kan werken en meer kan doen op een dag.
+Als ik ergens tegen aan loop moet ik sneller om hulp vragen en minder lang er tegen me beeld kijken en dan opgeven als ik er na 30+ min er nog steeds niet uit kom
+Minder kopieren van google en het zelf typen waardoor ik meerdere dingen uit me code heb gehaald wat ik niet snapte maar dingen er in plaats die ik wel snap.
+
+
+Nagekeken door Tim van Eert
+---------------------------
+
+Feedback:
+---------
+tim vond het netjes 
+
+Vond hij/zij dat je uitwerking aan alle beoordelingscriteria heeft voldaan?
+---------------------------------------------------------------------------
+zo ver als tim kon zien voldeed de opdracht aan de beoordelingscriteria
+
+Wat vond hij/zij goed aan de uitwerking van je opdracht?
+--------------------------------------------------------
+filter function van de status
+gebruik gemaakt van $_SERVER properties 
+naming is better vergeleken stemwijzer
+
+Wat vond hij/zij waar je nog in kan verbeteren?
+-----------------------------------------------
+je included overall je head.php terwijl je op veel plekken net zo goed de connection kan include want in je head staan ook nog links naar stylesheets die je niet nodig hebt bij alles.
+overall weer de zelfde statement gebruikt om je list/tasks optehallen terwijl als je daar functies van zou maken dan haal je dubbele code weg.
+javascript in een aparte file en niet in php

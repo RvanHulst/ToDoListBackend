@@ -1,9 +1,9 @@
 
 <?php //Starts the database connection.
-include __DIR__ . '\head.php';
+include 'head.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
-$stmt = $conn->prepare("SELECT `id`, `name` FROM `lists` WHERE `id` = :id");
+$stmt = $conn->prepare("SELECT * FROM `lists` WHERE `id` = :id");
 $stmt->bindParam('id', $_GET['id']);
 $stmt->execute();
 
@@ -14,7 +14,7 @@ $stmt2 = $conn->prepare("SELECT * FROM tasks WHERE list_id = :list_id");
 $stmt2->bindParam(':list_id', $_GET['id']);
 $stmt2->execute();
 
-$result2 = $stmt2->fetchAll();
+$infotask = $stmt2->fetchAll();
 $conn = null;
 ?>
 
@@ -42,7 +42,7 @@ $conn = null;
             </thead>
             <tbody>
                 <?php //Puts all the tasks in a table with a foreach loop.
-                foreach ($result2 as $row) {
+                foreach ($infotask as $row) {
                 ?>
                     <tr class="tasksTable <?php echo $row['status'] ?>">
                         <td><?php echo $row['name'] ?></td>
