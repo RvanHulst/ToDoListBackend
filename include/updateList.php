@@ -1,7 +1,7 @@
 <?php
 //Starts the database connection.
 
-require 'connection.php';
+require_once 'connection.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
 $stmt = $conn->prepare("SELECT * FROM lists WHERE id=:id");
@@ -16,7 +16,7 @@ $conn = null;
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //Starts the database connection.
-    require 'connection.php';
+    require_once 'connection.php';
     //Prepares the statement to update the list, it then binds the parameters using PDO compliance and then redirects back to the index page.
 
     $stmt = $conn->prepare("UPDATE lists SET name = :name WHERE id=:id");
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $conn = null;
     header("Location: ../overview.php");
 };
-include "head.php";
+require "head.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

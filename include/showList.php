@@ -16,7 +16,7 @@ $stmt2->execute();
 
 $infotask = $stmt2->fetchAll();
 $conn = null;
-include "head.php";
+require "head.php";
 ?>
 
 <!DOCTYPE html>

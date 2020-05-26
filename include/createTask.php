@@ -1,5 +1,5 @@
 <?php //Starts the database connection. 
-require 'connection.php';
+require_once 'connection.php';
 //Prepares and executes the statement getting the ID of the list you are currently in. 
 $stmt = $conn->prepare("SELECT * FROM lists WHERE id=:id"); 
 $stmt->bindParam(':id', $_GET['id']); 
@@ -10,7 +10,7 @@ $conn = null;
 //Checks if the server got a post request , if so executes the createTask function. 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
     
-    require 'connection.php';
+    require_once 'connection.php';
     //Prepares the statement to create the tasks, it then binds the parameters using PDO compliance and then redirects back to the list page. 
     $stmt = $conn->prepare("INSERT INTO tasks (name, description, list_id, duration, status) VALUES (:name, :description, :list_id, :duration, :status)"); 
     $stmt->bindParam(':name', $_POST['name']); 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
  
     header("location:showList.php?id=" . $_GET["id"]); 
 }; 
-    include "head.php";
+    require "head.php";
 ?> 
  
 <body> 
