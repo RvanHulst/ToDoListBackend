@@ -1,5 +1,5 @@
 <?php //Starts the database connection.
-require_once 'connection.php';
+require 'connection.php';
 
 //Prepares and executes the statement getting the ID of the task you are currently in.
 $stmt = $conn->prepare("SELECT * FROM tasks WHERE id=:id");
@@ -11,7 +11,7 @@ $conn = null;
 //Checks if there is anything in the POST for the property task_name, if so executes the updateTask function.
 if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
     //Starts the database connection.
-    require_once 'connection.php';
+    require 'connection.php';
     //Prepares the statement to update the task, it then binds the parameters using PDO compliance and then redirects back to the list page
     $stmt = $conn->prepare("UPDATE tasks SET name=:name, description=:description, duration=:duration, status=:status WHERE id=:id"); 
     $stmt->bindParam(':id', $_GET['id']); 
