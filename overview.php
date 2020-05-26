@@ -1,13 +1,13 @@
 
 <?php //Starts the database connection.
-require "include/head.php";
-require "include/navbar.php";
-
+require 'include/connection.php';
 
 $stmt = $conn->prepare("SELECT * FROM `lists`");
 $stmt->execute();
 $result = $stmt->fetchAll();
 $conn = null;
+include "include/head.php";
+include "include/navbar.php";
 ?>
 
 <body>

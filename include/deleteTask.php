@@ -8,5 +8,5 @@ $stmt->bindParam(':id', $_GET['id']);
 $stmt->execute();
 
 $conn = null;
-
+//it passes the url of the page of the page it came from
 header('Location: ' . $_SERVER['HTTP_REFERER']);

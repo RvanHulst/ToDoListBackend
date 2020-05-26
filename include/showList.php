@@ -1,6 +1,6 @@
 
 <?php //Starts the database connection.
-include 'head.php';
+require 'connection.php';
 
 //Prepares and executes the statement getting the ID of the list you are currently in.
 $stmt = $conn->prepare("SELECT * FROM `lists` WHERE `id` = :id");
@@ -16,6 +16,7 @@ $stmt2->execute();
 
 $infotask = $stmt2->fetchAll();
 $conn = null;
+include "head.php";
 ?>
 
 <!DOCTYPE html>

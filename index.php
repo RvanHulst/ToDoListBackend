@@ -1,11 +1,6 @@
 <?php 
-    require "include/connection.php";
-	require "include/navbar.php";
- ?>
- <!DOCTYPE html>
- <html>
-<?php 
-require "include/head.php";
+    include "include/navbar.php";
+    include "include/head.php";
 ?>
     
     <body>
