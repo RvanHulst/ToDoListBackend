@@ -12,3 +12,5 @@
     $stmt->execute(); 
 
     header("location:../view/showList.php?id=" .  $_GET['list_id']);
+
+    

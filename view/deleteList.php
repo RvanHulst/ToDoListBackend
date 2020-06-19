@@ -1,13 +1,10 @@
 <?php
 require "../include/connection.php";
 
-error_reporting(-1);
-
   $stmt = $conn->prepare("SELECT * FROM lists WHERE id = :id");
   $stmt->bindParam(":id", $_GET['id']);
   $stmt->execute();
   $result = $stmt->fetch();
-
   $conn = NULL;
 
 require "../include/head.php";

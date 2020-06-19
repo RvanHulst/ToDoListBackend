@@ -1,5 +1,5 @@
 <?php
-require 'include/connection.php';
+require '../include/connection.php';
 //Checks if the server got a post request , if so executes the createTask function. 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
     var_dump($_GET['id']);

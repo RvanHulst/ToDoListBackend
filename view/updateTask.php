@@ -1,6 +1,5 @@
 <?php //Starts the database connection.
 require '../include/connection.php';
-
 //Prepares and executes the statement getting the ID of the task you are currently in.
 $stmt = $conn->prepare("SELECT * FROM tasks WHERE id=:id");
 $stmt->bindParam(':id', $_GET['id']);
@@ -13,7 +12,7 @@ require "../include/head.php";
 ?>
     <div class="container">
         <h1>Taak "<?php echo $result['name'] ?>" aanpassen</h1>
-        <form method="POST" action='../functionality/editTask.php?id=<?php echo $result['id'] ?>'>
+        <form method="POST" action='../functionality/editTask.php?id=<?php echo $result['id'] ?>&list_id=<?php echo $result['list_id'] ?>'>
         <div class="form-group"> 
                 <label for="name">Taak Naam: </label> 
                 <input type="text" class="form-control" name="name" value="<?php echo $result['name'] ?>" placeholder="<?php echo $result['name'] ?>" required>
@@ -34,8 +33,6 @@ require "../include/head.php";
                     <option>Afgemaakt</option> 
                 </select> 
             </div> 
-            <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
-            <input type="hidden" name="list_id" value="<?php echo $result['list_id'] ?>">
             <button type="submit" class="btn btn-primary">Taak Veranderen in de lijst </button>
         </form>
     </div>

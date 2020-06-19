@@ -48,7 +48,7 @@ require "../include/head.php";
                         <td class="text-right">
                             <a class="btn btn-warning" href='updateTask.php?id=<?php echo $row['id'] ?>&list_id=<?php echo $row["list_id"]?>'>Edit</i>
                             </a>
-                            <a class="btn btn-danger" href='deleteTask.php?id=<?php echo $row['id'] ?>'>Delete</i>
+                            <a class="btn btn-danger" href='deleteTask.php?id=<?php echo $row['id'] ?>&list_id=<?php echo $row["list_id"]?>'>Delete</i>
                             </a>
                         </td>
                     </tr>
@@ -59,7 +59,7 @@ require "../include/head.php";
         </table>
         <div class="col-12 text-center">
             <a class="btn btn-danger text-white" href="overview.php">Terug naar Overview</a>
-            <a class="btn btn-primary text-white" href="createTask.php?id=<?php echo $result['id'] ?>">Nieuwe taak aanmaken</a>
+            <a class="btn btn-primary text-white" href="createTask.php?id=<?php echo $result['id'] ?>&list_id=<?php echo $row["list_id"]?>">Nieuwe taak aanmaken</a>
         </div>
     </div>
 <?php
